@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get(':version')
-  getResponse(@Param() params): string {
+  getResponse(@Param() params): Object {
     return this.appService.getResponse(params.version);
   }
 }

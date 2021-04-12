@@ -2,9 +2,10 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getResponse(version): Object {
+  getResponse(version, query): Object {
     return {
-      v: version
+      v: version,
+      query
     };
   }
 }
